@@ -1,0 +1,29 @@
+  661  cut -d "," -f 8 2019-01.csv > January.txt
+  662  vi January.txt
+  665  sort -nr January.txt > January.txt
+  666  vi January.txt
+  667  sort -nr January.txt > SortedJanuary.txt
+  668  vi January.txt
+  669  vi SortedJanuary.txt
+  670  cut -d "," -f 8 2019-01.csv > January.txt
+  671  vi January.txt
+  672  sort -nr January.txt > SortedJanuary.txt
+  673  vi SortedJanuary.txt
+  674  uniq -c SortedJanuary.txt > ws3.txt
+  675  vi ws3.txt
+  676  sort -nr ws3.txt
+  677  vi ws3.txt
+  678  cut -d "," -f 8 2019-02.csv > Feb.txt
+  679  sort -nr Feb.txt > SortedFeb.txt
+  680  vi SortedFeb.txt
+  681  uniq -c SortedFeb.txt > SortedFeb2.txt
+  682  vi SortedFeb2.txt
+  683  sort -nr SortedFeb2.txt
+  684  vi ws3.txt
+  685  ls
+  686  cp ws3.txt /ws3
+  694  cd ws3
+  695  cd taxidata
+  700  vi Feb.txt
+  732  vi ws3.txt
+  733  history > cmds.log
