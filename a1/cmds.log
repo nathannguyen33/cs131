@@ -1,0 +1,25 @@
+  2. 480 pwd >> a1.txt
+
+  3. 481  id
+
+  482  id >> a1.txt
+  4. 483  mkdir temp
+  485  chmod -R 600 temp
+  493  mv temp.txt /temp
+ 
+  5. 508  mkdir temp2
+     516  mv temp2 /temp3
+     517  mv temp2 /temp3 >> at.txt
+
+  6. 530  cd /proc
+
+  7. 607  vi meminfo
+
+  8. 608  tail cpuinfo
+     609  cat cpuinfo
+
+  9. 610  cd /etc/
+     613  vi os-release
+
+  10. 614  ls -l os-release
+      626  vi os-release

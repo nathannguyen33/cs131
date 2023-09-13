@@ -1,0 +1,18 @@
+
+2. /mnt/scratch/nathan23fa/cs131/a1
+3. uid=1024(nathan23fa) gid=1024(nathan23fa) groups=1024(nathan23fa)
+4. total 0
+mv: cannot create regular file '/temp': Permission denied
+5. mv temp2 /temp3 >> at.txt
+mv: cannot create directory '/temp3': Permission denied
+cp -R temp2 /a1
+cp: cannot create directory '/a1': Permission denied 
+6. "meminfo" "cpuinfo"
+7. MemTotal:       73080512 kB.
+8. processor	: 255
+cpu		: POWER8 (architected), altivec supported
+clock		: 3425.000000MHz
+revision	: 2.1 (pvr 004b 0201) 
+9. VERSION="8.6 (Ootpa)"
+10. ls -l os-release
+lrwxrwxrwx. 1 root root 22 Apr  6  2022 os-release -> ..//usr/lib/os-release
