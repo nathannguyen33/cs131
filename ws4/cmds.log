@@ -1,0 +1,40 @@
+  746  vi .bashrc
+  748  source ~/.bashrc
+  753  cd cs131
+  755  w
+  756  l
+  757  mkdir ws4
+  763  ls
+  764  cat ws4.txt
+  766  cp /datasets/taxidata.tar.gz .
+  769  tar zxvf taxidata.tar.gz
+  775  mkdir FARE
+  777  script ws4.txt
+  779  cd taxidata
+  781  head 2019-06.csv
+  782  grep -E '[N],145.0,145.0,' 2019-06.csv | cut -d ',' -f 11 > 145.0-145.0.txt
+  783  ls
+  784  cd 145.0-145.0.txt
+  785  vi 145.0-145.0.txt
+  786  grep -E '[N],262.0,263.0,' 2019-06.csv | cut -d ',' -f 11 > 262.0-263.0.txt
+  787  ls
+  805  mv 145.0-145.0.txt ~/cs131/ws4/FARE/
+  808  mv 262.0-263.0.txt ~/cs131/ws4/FARE/
+  820  sumFARE1=$(paste -sd+ 145.0-145.0.txt | bc)
+  824  echo $sumFARE1
+  825  divisor1=(wc -l < 145.0-145.0.txt)
+  826  divisor1=$(wc -l < 145.0-145.0.txt)
+  827  echo $divisor1
+  828  averageFARE=("scale=2; $sumFARE1 / $divisor1" | bc)
+  829  averageFARE=$("scale=2; $sumFARE1 / $divisor1" | bc)
+  830  averageFARE=$(echo "scale=2; $sumFARE1 / $divisor1" | bc)
+  831  echo $averageFARE
+  832  sumFARE2=$(pase -sd+ 262.0,263.0.txt | bc)
+  833  sumFARE2=$(paste -sd+ 262.0,263.0.txt | bc)
+  834  sumFARE2=$(paste -sd+ 262.0-263.0.txt | bc)
+  835  divisor2=$(wc -l < 262.0-263.txt)
+  836  divisor2=$(wc -l < 262.0-263.0.txt)
+  837  averageFARE2=$(echo "scale=2; $sumFARE2 / $divisor2" | bc)
+  838  echo $averageFARE2
+  841  vi ws4.txt
+  842  history > cmds.log
