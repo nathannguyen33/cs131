@@ -1,0 +1,19 @@
+1. 19.52 is the average amount
+
+2. The highest total amount paid by costumers who were picked up on May 11, 2019 is $99.96.
+
+3. For rides with three or more costumers had the top 10 drop off locations of
+236.0
+237.0
+161.0
+170.0
+162.0
+230.0
+142.0
+234.0
+48.0
+239.0
+
+4. Among the rides from the most popular pick up locations the most popular drop off location was 236.0 at 52,363 occurences.
+
+5. The busiest location throughout the year in 2019 was 237.0 at 3,420,131 occurences.

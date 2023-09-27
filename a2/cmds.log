@@ -1,0 +1,21 @@
+ 1006  mkdir a2
+ 1012  head 2019-05.csv
+ 1017  grep -E "^.{3},\"2019-05-01" 2019-05.csv | cut -d, -f17 > totalamounts.txt
+ 1018  vi totalamounts.txt
+ 1019  sumTOTAL=$(paste -sd+ totalamounts.txt | bc)
+ 1021  echo $sumTOTAL
+ 1022  divisor=$(wc -l < totalamounts.txt)
+ 1023  echo $divisor
+ 1024  averageFARE=$(echo "scale=2; $sumTOTAL / $divisor" | bc)
+ 1025  echo $averageFARE
+ 1035  grep -E "^.{3},\"2019-05-11" 2019-05.csv | cut -d, -f17 |sort -r | head -1 >> temp.txt
+ 1037  grep -E ".{6}\",1.0" 2019-05.csv | cut -d, -f9 >> duloc.txt
+ 1038  sort -n duloc.txt | uniq -c | sort -nr | head -10 >> duloc2.txt
+ 1039  vi duloc2.txt
+ 1057  grep -E "237\.0,.{3}\.0" 2019-05.csv | cut -d, -f9 | sort | uniq -c | sort -nr | head -1 >> temp.txt
+ 1066  ls . | split
+ 1073  cat xaa | xargs cat -v >> 2019.csv
+ 1074  vi 2019.csv
+ 1075  grep -E "...,\"2019" 2019.csv > 2019-sorted.csv
+ 1076  cut -d, -f8 2019-sorted.csv | sort | uniq -c | sort -nr | head -1 >> 2019-pu.txt
+ 1077  vi 2019-pu.txt
