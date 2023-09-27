@@ -1,0 +1,8 @@
+  888  grep -E "^(([^,]*),){7}234\.0" 2019-08.csv | cut -d, -f9 | sort | uniq -c | sort -nr | head -100 >> top-100-doloc.txt
+  889  vi top-100-doloc.txt
+  950  mv top-100-doloc.txt ~/cs131/ws5/do234/
+  955  nano loop.sh
+  965  mv 2019-08.csv ~/cs131/ws5/do234/
+  973  sh loop.sh &
+  981  vi ws5.txt
+  991  history >> cmds.log
