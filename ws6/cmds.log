@@ -1,0 +1,24 @@
+ Making ws6 Directory 
+1002  cd cs131
+ 1004  mkdir ws6
+
+Creating vendor2.csv
+ 1006  cd taxidata
+ 1008  head 2019-11.csv
+ 1011  sed -n '/^2.0,/p' 2019-11.csv > vendor2.csv
+ 1012  head vendor2.csv
+ 1051  mv vendor2.csv ~/cs131/ws6/
+ 
+Creating no-separators.csv
+ 1064  sed 's/://g' 2019-11.csv | sed 's/\"//g' | sed 's/-//g' > no-separators.csv
+ 1066  mv no-separators.csv ~/cs131/ws6
+
+Creating no-fractions.csv
+ 1070  sed 's/\.[0-9]*//g' no-separators.csv > no-fractions.csv
+
+Putting all results into ws6.txt
+ 1072  wc vendor2.csv >> ws6.txt
+ 1073  head -10 no-separators.csv >> ws6.txt
+ 1074  head -10 no-fractions.csv >> ws6.txt
+ 1075  vim ws6.txt
+ 1077  history >> cmds.log
