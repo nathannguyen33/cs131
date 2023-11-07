@@ -1,0 +1,30 @@
+a3t3 File)
+    1   set boxwidth 0.5 absolute
+    2   set style fill solid 1.0
+    3   set style histogram
+    4   set out 'a3t3.svg'
+    5   set title "Average Amount of Tip From Passengers Throughout August 2019"
+    6   set xlabel "Number of Passengers"
+    7   set ylabel "Tip Amount"
+    8   set yrange[0:10]
+    9   plot 'a3t3.dat' using 1:2:xtic(1) with boxes lc rgb 'gray' title "tip amount based on # of passengers"
+
+a4t4 File)
+   10   #!/usr/local/bin/gnuplot -persist
+   11   set style fill transparent solid 0.2 noborder
+   12   set datafile separator ' '
+   13   set terminal svg
+   14   set out 'a3t4.svg'
+   15   #set dummy u, v
+   16   #set key fixed right top vertical Right noreverse enhanced #autotitle box lt black linewidth 1.000 dashtype solid
+   17   #set parametric
+   18   set title "Average Total Amount Based On Same Distance"
+   19   set xlabel "Distance"
+   20   set ylabel "Total Amount"
+   21   #set colorbox vertical origin screen 0.9, 0.2 size screen 0.05, 0.6 front  noinvert bdefault
+   22   NO_ANIMATION = 1
+   23   set autoscale x
+   24   set autoscale y
+   25   ## Last datafile plotted: "hemisphr.dat"
+   26   plot 'a3t4.dat' using 1:2 with circles lc rgb 'red'
+   28   exit
