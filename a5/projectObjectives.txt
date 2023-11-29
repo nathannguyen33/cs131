@@ -1,0 +1,5 @@
+This is where I will list my project objectives.
+
+With this anime dataset I hope to be able to determine the average amount of episodes each anime releases. I hope to create a scatter plot showing each anime and the amount of episodes for each. 
+
+I would  also like to create a histogram which show which season has the most released animes with highest ratings.

@@ -1,0 +1,4 @@
+The number of entries for this specific data set is 18,495 with 17 columns.
+Each column in order consists of Rank #, Name of Anime, Japanese name of Anime, Type of Anime, # of episodes, The production studio, The release season, The genre, Rating, Release year, End year, Description, Content warnings, Related Mangas, Related Animes, Voice actors, and Staff.
+
+After some data manipulation there were 9,117 entries. This is after removing all entries that did not have a value for episode count. As we trimmed the data set further there were 3,740 entries for anime that had a season listed.

@@ -1,0 +1,28 @@
+Making directory for assignment 5.  
+  791  mkdir a5
+  
+Creating text files for project objectives and metadata.
+  811  vim projectObjectives.txt
+  821  vim metadata.txt
+  
+Creating and running the script.
+  827  vim Anime_script.sh
+  829  chmod +x Anime_script.sh
+  830  ./Anime_script.sh
+  
+  832  head Sorted_Anime.csv
+  848  vim Filtered_Anime.csv
+
+Making the directory for gnuplot.
+  892  mkdir a5gnuplot
+  
+Command to find the average amount of episodes from all entries.
+  894  awk -F, 'NR > 1 && $5 ~ /^[0-9]+(.[0-9]+)?$/ {sum += $5; count++} END {if (count > 0) print sum / count}' Anime.csv
+  
+Using awk commands to filter more for gnuplot scatterplot. 
+  966  awk -F, 'NR > 1 {print NR-1, $4}' Filtered_Anime.csv > anime_episodes.dat
+  968  mv anime_episodes.dat ~/cs131/a5/a5gnuplot
+  
+Using awk commands to filter more for gnuplot histogram.
+  993  awk -F, 'NR>1 {count[$5]++} END {for (season in count) print season, count[season]}' Filtered_Anime.csv | sort -k2 -rn > seasons_data.dat
+  995  mv seasons_data.dat ~/cs131/a5/a5gnuplot/
